@@ -1,0 +1,34 @@
+<!-- Page Header -->
+<header class="masthead about-bg">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>Add the About Me content</h1>
+          <span class="subheading">Have questions? I have answers.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-md-10 mx-auto">
+			<%= form_for(@about) do |f| %>
+				<div class="control-group">
+					<div class="form-group floating-label-form-group controls">
+						<%= f.label :content %>
+						<%= f.text_area :content, row: 15, class: 'form-control', placeholder: 'Enter your About Me info' %>
+					</div>
+				</div> <br>
+      	<div class="form-group">				
+					<%= f.submit class: 'btn btn-primary' %>		
+				</div>									
+			<% end %>			
+		</div>
+	</div>
+</div>
+
+

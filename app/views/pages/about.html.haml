@@ -1,0 +1,15 @@
+%header.masthead.about-bg
+  .overlay
+  .container
+    .row
+      .col-lg-8.col-md-10.mx-auto
+        .page-heading
+          %h1 About Me
+          %span.subheading This is what I do.
+/ Main Content
+.container
+  .row
+    .col-lg-8.col-md-10.mx-auto
+      = simple_format(@about.content)
+      = link_to 'Update Info', new_about_path, class: 'btn btn-primary'
+%hr/

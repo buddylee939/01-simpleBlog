@@ -1,0 +1,21 @@
+@import "bootstrap";
+@import "font-awesome";
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800");
+@import 'clean-blog';
+
+header.about-bg {
+	background: image-url('about-bg.jpg');
+}
+
+header.contact-bg {
+	background: image-url('contact-bg.jpg');
+}
+
+header.home-bg {
+	background: image-url('home-bg.jpg');
+}
+
+header.post-bg {
+	background: image-url('post-bg.jpg');
+}
