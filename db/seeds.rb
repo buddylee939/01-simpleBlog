@@ -16,3 +16,11 @@
 end
 
 puts '10 posts created'
+
+# 1.times do |a|
+#   About.create!(
+#     content: 'My about'
+#   )
+# end
+
+# puts '1 about created'

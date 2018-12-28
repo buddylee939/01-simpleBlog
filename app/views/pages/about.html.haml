@@ -10,6 +10,10 @@
 .container
   .row
     .col-lg-8.col-md-10.mx-auto
-      = simple_format(@about.content)
-      = link_to 'Update Info', new_about_path, class: 'btn btn-primary'
+      - if !@about.nil?
+        = simple_format(@about.content)
+        = link_to 'Update Info', new_about_path, class: 'btn btn-primary'
+      - else
+        %p Add your about info
+        = link_to 'Create Info', new_about_path, class: 'btn btn-primary'
 %hr/
