@@ -1,0 +1,56 @@
+<header class="masthead post-bg jpg">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>
+            <%= @post.title %>
+          </h1>
+          <h2 class="subheading">
+            <%= @post.subtitle %>
+          </h2>
+          <span class="meta">
+            Posted by
+            <a href="#">pep@example.com</a>
+            on 
+            <%= @post.created_at.strftime("%A, %b %d") %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Post Content
+-->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <%= simple_format(@post.body) %>
+        <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-success' %>
+        <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      </div>
+    </div>
+  </div>
+</article>
+<br>
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h4>Comments</h4>
+      </div>
+    </div>
+    <div class="row">
+      <%= render @post.comments %>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <%= render 'comments/form' %>
+      </div>
+    </div>
+  </div>
+</article>
+<hr/>
+

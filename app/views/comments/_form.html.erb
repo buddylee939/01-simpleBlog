@@ -1,0 +1,11 @@
+
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <div class="control-group">
+    <div class="form-group floating-label-form-group controls">
+      <%= f.text_area :body, class: 'form-control', placeholder: 'Leave a comment' %>
+    </div>
+  </div> <br>
+  <div class="form-group">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>             
+<% end %>

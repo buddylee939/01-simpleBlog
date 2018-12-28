@@ -31,6 +31,9 @@
 	      	<p class="post-meta">
 	      		Posted by: <%= link_to 'User', '#' %> on <%= post.created_at.strftime("%A, %b %d") %>
 	      	</p>
+          <p class="post-meta">
+            No. of Comments: <%= post.comments.count %>
+          </p>
 	      </div>	
 	      <hr>			
     	<% end %>
